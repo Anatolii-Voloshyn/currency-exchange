@@ -1,0 +1,87 @@
+<div class="
+  flex
+  justify-center
+  py-4
+  px-6
+  my-14"
+>
+    <div class="flex flex-row mr-5">
+      <h2
+        class="
+          relative
+          bottom-16
+          lg:bottom-12
+          left-64
+          text-2xl
+          text-red-500"
+        *ngIf="!selectedCurrency1"
+      >
+        Choose currency!
+      </h2>
+      <input
+        class="
+          h-16
+          pl-6
+          border
+          rounded-s-full
+          border-gray-700
+          py-2
+          text-xl"
+        [(ngModel)]="amount1"
+        (input)="calculateAmount1()"
+        placeholder="Amount"
+      >
+      <select
+        name="first"
+        id="1"
+        class="border rounded-e-full ml-3 text-xl"
+        [(ngModel)]="selectedCurrency1"
+        (change)="calculateAmount1()"
+      >
+        <option *ngFor="let key of getCurrencyKeys()" [value]="key">
+          {{ key }}
+        </option>
+      </select>
+    </div>
+
+    <div class="flex flex-row ml-5">
+      <input
+        class="
+          pl-6
+          py-2
+          text-xl
+          border
+          rounded-s-full
+          border-gray-700"
+        [(ngModel)]="amount2"
+        (input)="calculateAmount2()"
+        placeholder="Amount"
+      >
+      <select
+        name="second"
+        id="2"
+        class="border rounded-e-full ml-3 text-xl"
+        [(ngModel)]="selectedCurrency2"
+        (change)="calculateAmount2()"
+      >
+        <option *ngFor="let key of getCurrencyKeys()" [value]="key">
+          {{ key }}
+        </option>
+      </select>
+      <h2
+        class="
+          relative
+          bottom-16
+          lg:bottom-12
+          right-64
+          text-2xl
+          text-red-500"
+        *ngIf="!selectedCurrency2"
+      >
+        Choose currency!
+      </h2>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,90 @@
+<div>
+  <div class="
+    flex
+    justify-between
+    items-center
+    border-b
+    border-black
+    bg-gray-600"
+  >
+    <div class="
+      flex
+      ml-24
+      items-center"
+    >
+      <img class="w-24" src="../../../assets/images/logo.png" alt="logo">
+    </div>
+
+    <div class="text-5xl text-gray-200">
+      Currency Exchange
+    </div>
+
+    <div class="
+      flex
+      flex-col
+      mr-24
+      my-2
+      text-gray-200
+      font-sans
+      items-start"
+    >
+      <div class="flex flex-row items-center">
+        <img class="w-10 mr-3" src="../../../assets/images/GB.svg" alt="Euro">
+        <div class="flex flex-col">
+          <div class="
+            rounded-md
+            font-bold
+            text-xl
+            leading-none"
+            >
+              GBP
+            </div>
+            <div class="text-xs leading-none">
+              Pound
+            </div>
+        </div>
+        <div class="ml-5 text-xl font-mono">
+          {{ myData.conversion_rates.UAH / myData.conversion_rates.GBP | number: '1.2-2' }}
+        </div>
+      </div>
+      <div class="flex flex-row mt-1 items-center">
+        <img class="w-10 mr-3" src="../../../assets/images/US.svg" alt="Euro">
+        <div class="flex flex-col">
+          <div class="
+            rounded-md
+            font-bold
+            text-xl
+            leading-none"
+            >
+              USD
+            </div>
+            <div class="text-xs leading-none">
+              Dollar
+            </div>
+        </div>
+        <div class="ml-5 text-xl font-mono">
+          {{ myData.conversion_rates.UAH / myData.conversion_rates.USD | number: '1.2-2' }}
+        </div>
+      </div>
+      <div class="flex flex-row mt-1 items-center">
+        <img class="w-10 mr-3" src="../../../assets/images/EU.svg" alt="Euro">
+        <div class="flex flex-col">
+          <div class="
+            rounded-md
+            font-bold
+            text-xl
+            leading-none"
+            >
+              EUR
+            </div>
+            <div class="text-xs leading-none">
+              Euro
+            </div>
+        </div>
+        <div class="ml-5 text-xl font-mono">
+          {{ myData.conversion_rates.UAH / myData.conversion_rates.EUR | number: '1.2-2' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
